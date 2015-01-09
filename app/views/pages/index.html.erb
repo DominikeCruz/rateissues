@@ -16,10 +16,11 @@
   <div class="row">
     <div class="col-md-12">
       <ul>
-        <li><a href="<%= search_path :language => 'ruby' %>">Ruby</a></li>
-        <li><a href="<%= search_path :language => 'javascript' %>">Javascript</a></li>
-        <li><a href="<%= search_path :language => 'python' %>">Python</a></li>
+        <% top_languages.each do |l| %>
+          <li><a href='<%= search_path :language => "#{l.downcase}" %>'><%= l  %></a></li>
+        <% end %>
       </ul>
     </div>
   </div>
 </div>
+
