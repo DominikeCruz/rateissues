@@ -1,26 +1,18 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <div class="round-issue ruby">Rails</div>
-      <div class="round-issue java">Hibernate</div>
-      <div class="round-issue js">Angular</div>
-      <div class="round-issue css">Bootstrap</div>
-      <div class="round-issue scala">Scala</div>
-      <div class="round-issue python">Bottle</div>
-      <div class="round-issue js">Grunt</div>
-      <div class="round-issue css">Zurb</div>
-      <div class="round-issue scala">Scalloid</div>
-      <div class="round-issue python">Django</div>
+      <div class="top-projects">
+        <!-- rendered in pages.js -->
+      </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
       <ul>
-        <% top_languages.each do |l| %>
-          <li><a href='<%= search_path :language => "#{l.downcase}" %>'><%= l  %></a></li>
+        <% top_languages.each do |l|  %>
+        <li><a href='<%= search_path :language => "#{l}"%>'><%= l %></a></li>
         <% end %>
       </ul>
     </div>
   </div>
 </div>
-
